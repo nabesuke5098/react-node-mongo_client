@@ -12,7 +12,7 @@ class App extends React.Component {
       <>
         <Header />
         <Switch>
-          <Route exact path="/" component={TopPage} />
+          <Route exact path="/" component={TopPage} pageTitle={'top page'} />
         </Switch>
         <Footer />
       </>
