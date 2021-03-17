@@ -7,12 +7,16 @@ export const useStyles = makeStyles((theme) => ({
     display: 'flex',
   },
   appBar: {
+    color: '#e0f2f1', 
+    backgroundColor: '#004d40',
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
   },
   appBarShift: {
+    color: '#e0f2f1', 
+    backgroundColor: '#004d40',
     width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['margin', 'width'], {
       easing: theme.transitions.easing.easeOut,
@@ -22,6 +26,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   title: {
     flexGrow: 1,
+    textAlign: 'center'
   },
   hide: {
     display: 'none',
