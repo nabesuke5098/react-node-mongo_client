@@ -1,17 +1,15 @@
 import React from 'react';
+import Typography from '@material-ui/core/Typography';
+import { FooterContainer, FooterInner } from './footer.styles';
 
-class Footer extends React.Component {
-  render() {
-    return (
-      <div className="footer">
-        <div className="footer-inner">
-          <div className="footer-copyrights">
-            @copyrihts
-          </div>
-        </div>
-      </div>
-    );
-  }
+export default function Footer() {
+  return (
+    <FooterContainer>
+      <FooterInner>
+        <Typography variant="subtitle1">
+          @copyrights
+        </Typography>
+      </FooterInner>
+    </FooterContainer>
+  );
 }
-
-export default Footer;
