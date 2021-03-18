@@ -6,7 +6,10 @@ export const useStyles = makeStyles({
     marginRight: 'auto',
     verticalAlign: 'middle', 
     maxWidth: '90%',
-    minHeight: 600,
+    minHeight: 'auto',
+    margin: '25px 0',
+    overflow: 'hidden',
+    width: '100%'
   },
   media: {
     height: 140,
