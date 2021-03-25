@@ -7,7 +7,7 @@ const INITIAL_STATE = {
 const modalReducer = (state = INITIAL_STATE, action) => {
   switch(action.type) {
     case ModalActionTypes.IMG_MODAL_TOGGLE:
-      return !state;
+      return !state.open;
     default:
       return state;
   }

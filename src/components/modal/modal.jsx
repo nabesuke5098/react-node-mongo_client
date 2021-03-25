@@ -1,20 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { connect } from 'react-redux';
+import { setOpen } from '../../redux/modal/modal.actions';
+
 
 import Modal from '@material-ui/core/Modal';
-import { useTheme } from '@material-ui/core/styles';
 
 import { useStyles } from './modal.styles';
-import image from '../../assets/images/IMG_3249.jpeg';
 
-export default function ProfileModal(props) {
+const ProfileModal = ({ open, toggleModal }) => {
   const classes = useStyles();
-  const theme = useTheme();
-  const [open, setOpen] = useState(false);
-  // const { path } = this.props;
-
-  const handleModal = () => {
-    setOpen(!open);
-  }
 
   const body = (
     <div className={classes.paper}>
@@ -26,7 +20,7 @@ export default function ProfileModal(props) {
     <div>
       <Modal
         open={open}
-        onClose={handleModal}
+        onClose={() => toggleModal}
         aria-labelledby="profile-modal"
       >
         {body}
@@ -34,3 +28,16 @@ export default function ProfileModal(props) {
     </div>
   );
 }
+
+const mapStateToProps = state => {
+  return { open: state.open }
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  toggleModal() { dispatch(setOpen) }
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(ProfileModal);
