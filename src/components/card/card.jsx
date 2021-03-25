@@ -13,15 +13,10 @@ import { useStyles } from './card.styles';
 
 export default function ContentCard() {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
-
-  const handleModal = () => {
-    setOpen(!open);
-  }
 
   return (
     <Card className={classes.root}>
-      <CardActionArea onClick={handleModal}>
+      <CardActionArea ocClick={alert('modal')}>
         <CardMedia
           className={classes.media}
           image={image}

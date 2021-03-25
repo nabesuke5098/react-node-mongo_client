@@ -2,6 +2,7 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 
 import ContentCard from '../../components/card/card';
+import ProfileModal from '../../components/modal/modal';
 
 import { TopPageContainer } from './toppage.styles';
 
@@ -17,6 +18,7 @@ class TopPage extends React.Component {
             <ContentCard />
           </Grid>
         </Grid>
+        <ProfileModal />
       </TopPageContainer>
     );
   }

@@ -18,7 +18,7 @@ export default function ProfileModal(props) {
 
   const body = (
     <div className={classes.paper}>
-      <img src={image} />
+      <p>モーダル</p>
     </div>
   );
 
