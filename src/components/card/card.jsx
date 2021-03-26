@@ -15,7 +15,7 @@ const ContentCard = ({ toggleModal }) => {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea onClick={() => toggleModal}>
+      <CardActionArea onClick={toggleModal}>
         <CardMedia
           className={classes.media}
           image={image}
@@ -27,15 +27,11 @@ const ContentCard = ({ toggleModal }) => {
   )
 }
 
-const mapStateToProps = state => {
-  return { open: state.open }
+const mapDispatchToProps = dispatch => {
+  return { toggleModal: () => { dispatch(setOpen()) }}
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  toggleModal() { dispatch(setOpen) }
-});
-
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
 )(ContentCard);

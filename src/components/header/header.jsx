@@ -5,14 +5,13 @@ import clsx from 'clsx';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import Typography from '@material-ui/core/Typography';
 
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
+// import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
@@ -43,9 +42,9 @@ export default function Header() {
         })}
       >
         <Toolbar>
-          <Typography variant="h6" noWrap className={classes.title}>
+          <div className={classes.title}>
             Title
-          </Typography>
+          </div>
           <IconButton 
             edge="end" 
             color="inherit" 
@@ -63,9 +62,7 @@ export default function Header() {
         })}
       >
         <div className={classes.drawerHeader} />
-        <Typography paragraph>
           pageTitle
-        </Typography>
       </main>
       <Drawer
         className={classes.drawer}

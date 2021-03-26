@@ -9,6 +9,7 @@ import { useStyles } from './modal.styles';
 
 const ProfileModal = ({ open, toggleModal }) => {
   const classes = useStyles();
+  console.log(open);
 
   const body = (
     <div className={classes.paper}>
@@ -20,7 +21,7 @@ const ProfileModal = ({ open, toggleModal }) => {
     <div>
       <Modal
         open={open}
-        onClose={() => toggleModal}
+        onClose={toggleModal}
         aria-labelledby="profile-modal"
       >
         {body}
@@ -30,12 +31,12 @@ const ProfileModal = ({ open, toggleModal }) => {
 }
 
 const mapStateToProps = state => {
-  return { open: state.open }
+  return { open: state };
 }
 
-const mapDispatchToProps = (dispatch) => ({
-  toggleModal() { dispatch(setOpen) }
-})
+const mapDispatchToProps = (dispatch) => {
+  return { toggleModal: () => { dispatch(setOpen()) }}
+}
 
 export default connect(
   mapStateToProps,
