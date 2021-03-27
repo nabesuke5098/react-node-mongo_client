@@ -12,6 +12,6 @@ export const useStyles = makeStyles({
     width: '100%'
   },
   media: {
-    height: 140,
+    height: 280,
   },
 });

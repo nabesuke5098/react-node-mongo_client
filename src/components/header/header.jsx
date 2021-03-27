@@ -26,7 +26,6 @@ export default function Header() {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = useState(false);
-  // const { pageTitle } = this.props;
 
   const handleDrawer = () => {
     setOpen(!open);
@@ -62,7 +61,7 @@ export default function Header() {
         })}
       >
         <div className={classes.drawerHeader} />
-          pageTitle
+          Page Title
       </main>
       <Drawer
         className={classes.drawer}
